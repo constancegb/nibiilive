@@ -4,10 +4,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
       display: flex;
     flex-direction: column;
     height: 100%;
+}
+.hidden-overflow {
+  overflow: hidden;
 }
 body{
   height: 100%;
@@ -17,7 +20,7 @@ body{
   margin: 0;
   padding: 0;
 }
-/* 
+/*
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

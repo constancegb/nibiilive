@@ -1,0 +1,96 @@
+// EXEMPLE DE COLLECTION
+// {
+//   collectionName: Le nom de la collection entre guillemets. Ex: 'Hibaa',
+//   collectionDescription: Description de la collection entre guillemets. Ex: 'Pochettes 100% coton avec chainette',
+//   category: 'crop-tops' ou 'sacs/pochettes' ou 'bonnets/headbands' ou 'maison/deco' ou 'bebe' ou 'animaux',
+//   seasonality: 'ete' OU 'hiver',
+//   isPermanent: true ou false (pas de guillemets! true si c'est une collection permanente, false si non
+//   img: Le nom de l'image, qui doit être égal au nom de la collection sans la majuscule. L'image sera donc hibaa.jpg, et ici il faut écrire 'hibaa',
+//   items: [
+//     {
+//       name: 'Hibia',
+//       price: Le prix en chiffre. Ex: 60 (pas de guillemets!),
+//       img: ['hibaahibia1'], (donc tu nommes l'image en faisant : nom de la collection + nom de l'article + numéro de l'image)
+//       isSold: true OU false (pas de guillemets! true si l'objet est vendu, false si non),
+//       description: Description de l'article. Ex: 'Pochette à rabat, 100% coton, avec chainette en bandoulière ou main\nFermeture composé de 2 boutons en bois\nDimensions : 30cm de largeur / 20cm de hauteur\nAvec ou sans pompon décoratif sur le coté' (chaque fois que tu veux sauter une ligne, comme dans l'exemple, tu ajoutes : \n )
+//     },
+//     {
+//       name: 'Toto',
+//       price: 50,
+//       img: ['hibaatoto1', 'hibaatoto2', 'hibaatoto3'], (tu peux mettre plusieurs images à l'aricle comme ici)
+//       isSold: false,
+//       description: 'Pochette à rabat, 100% coton, avec chainette en bandoulière ou main\nFermeture composé de 2 boutons en bois\nDimensions : 30cm de largeur / 20cm de hauteur\nAvec ou sans pompon décoratif sur le coté'
+//     }
+//   ]
+// }
+// FIN DE L'EXEMPLE
+
+
+export const collections = [
+  // 1ère collection
+  {
+    collectionName: '',
+    collectionDescription: '',
+    category: '',
+    seasonality: '',
+    isPermanent: false,
+    img: '',
+    items: [
+      {
+        name: '',
+        price: 0,
+        img: [],
+        isSold: false,
+        description: ''
+      },
+      {
+        name: '',
+        price: 0,
+        img: '',
+        isSold: false,
+        description: ''
+      },
+      // Tu peux ajouter des ARTICLES ici
+    ]
+  },
+  // FIN de la 1ère collection
+  // 2ème collection
+  {
+    collectionName: '',
+    collectionDescription: '',
+    category: '',
+    seasonality: '',
+    isPermanent: false,
+    img: '',
+    items: [
+      {
+        name: '',
+        price: 0,
+        img: [],
+        isSold: false,
+        description: ''
+      },
+      {
+        name: '',
+        price: 0,
+        img: '',
+        isSold: false,
+        description: ''
+      },
+      // Tu peux ajouter des ARTICLES ici
+    ]
+  },
+  // FIN de la 2ème collection
+  // 3ème collection (Est ce que du coup les collections permanentes n'ont pas d'articles ? Juste une photo qui présente le modèle ?)
+  {
+    collectionName: '',
+    collectionDescription: '',
+    category: '',
+    seasonality: '',
+    isPermanent: true,
+    img: '',
+    items: []
+  },
+  // FIN de la 3ème collection
+  // Tu peux ajouter des COLLECTIONS ici si tu veux en mettre plus que 3
+];

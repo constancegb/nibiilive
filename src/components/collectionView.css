@@ -1,0 +1,129 @@
+.collection-container-wrapper {
+  margin: 4px;
+}
+
+.collection-container {
+  width: 45vw;
+  height: 43vh;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.collection-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: black;
+  transition: opacity 0.8s ease;
+  padding: 15px
+}
+
+.collection-info:hover {
+  opacity: 0.6;
+}
+
+.first-col {
+  width: 65%;
+}
+
+.second-col {
+  width: 35%;
+}
+
+.collection-name,
+.collection-description,
+.collection-items,
+.see-col-btn {
+  width: fit-content;
+  margin: auto;
+}
+
+.collection-name {
+  font-family: 'Amatic SC';
+  color: #e0d8cf;
+  font-weight: bold;
+  font-size: 2.2em;
+}
+
+.collection-description {
+  font-family: 'Raleway';
+    color: #e0d8cf;
+    font-size: 1em;
+    text-align: center;
+}
+
+.collection-items {
+  font-family: 'Amatic SC';
+  color: #e0d8cf;
+  font-size: 1.2em;
+}
+
+.items-available {
+  font-size: 3em;
+  font-style: normal;
+  font-family: 'Roboto';
+  margin-right: 5px;
+}
+
+.see-col-btn {
+  border: none;
+  padding: 10px;
+  background-color: #444444;
+  color: #d2c7bc;
+  font-family: 'Raleway';
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 1.5px;
+  font-weight: 900;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.see-col-btn:hover {
+  background-color: #636262;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .collection-container {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .collection-description {
+    margin-bottom: 20px;
+  }
+
+  .collection-info {
+    opacity: 0.6;
+    flex-direction: column;
+  }
+
+  .items-available__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collection-container {
+    width: 45vw;
+    height: 43vh;
+  }
+
+  .collection-info {
+    opacity: 0;
+    flex-direction: row;
+  }
+}

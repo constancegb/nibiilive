@@ -1,0 +1,39 @@
+.collections-select {
+  padding: 5px;
+}
+
+.collections-filter-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .collections-filter-content {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+  }
+
+  .collections-select {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collections-filter-content {
+    flex-direction: row;
+  }
+
+  .filter {
+    width: max-content;
+  }
+
+  .collections-select {
+    width: 30vw;
+  }
+}
