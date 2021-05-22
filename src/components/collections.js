@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CollectionView from './collectionView';
 import CollectionsFilters from './collectionsFilters';
+import NoCollection from './noCollection';
 import Footer from './footer';
 import { collections } from '../data/collections';
 import './collections.css';
@@ -18,6 +19,12 @@ export default function Collections() {
     });
   }
 
+  const displayNoCollection = () => {
+    return (
+      <NoCollection />
+    )
+  }
+
   return (
     <div>
     <div className='collections-content'>
@@ -27,7 +34,11 @@ export default function Collections() {
           <CollectionsFilters collections={collections} onCollectionsFiltered={(col) => setAllCollections(col)}/>
         </div>
         <div id='all-collections__results_' className='all-collections__results'>
-          { displayAllCollections() }
+          { allCollections.length !== 0 ? (
+            displayAllCollections()
+          ) : (
+            displayNoCollection()
+          ) }
         </div>
       </div>
 

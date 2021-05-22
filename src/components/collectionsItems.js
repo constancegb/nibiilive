@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import CollectionView from './collectionView';
-import CollectionsFilters from './collectionsFilters';
 import Footer from './footer';
 import { collections } from '../data/collections';
 import './collectionsItems.css';
-import {
-  useParams,
-  useLocation
-} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function CollectionsItems() {
   const loc = useLocation();

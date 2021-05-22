@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './footer.css';
 
 export default function Footer({ footerClass }) {
@@ -59,7 +59,7 @@ export default function Footer({ footerClass }) {
       </div>
 
       <div className='made-by'>
-        Site réalisé par <span><a className='constance' href="https://www.linkedin.com/in/constancegobert/" target="_blank">Constance Gobert</a></span>
+        Site réalisé par <span><a className='constance' href="https://www.linkedin.com/in/constancegobert/" target="_blank" rel="noopener noreferrer">Constance Gobert</a></span>
       </div>
     </div>
   );

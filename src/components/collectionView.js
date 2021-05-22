@@ -6,7 +6,6 @@ import {
 import './collectionView.css';
 
 export default function CollectionView({ collection }) {
-  const [image, setImage] = useState('');
   const [imgStyle, setImgStyle] = useState({});
   const {
     collectionName,
@@ -16,11 +15,10 @@ export default function CollectionView({ collection }) {
     isPermanent
   } = collection;
   const [colnamePath] = useState(collectionName.replace(' ', '-'));
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
 
   useEffect(() => {
     import(`../data/img/${img[0]}.jpg`).then(imageData => {
-      setImage(imageData)
       setImgStyle({ backgroundImage: `url(${imageData})` })
     })
   }, [collection]);
