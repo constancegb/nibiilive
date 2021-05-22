@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CollectionView from './collectionView';
 import CollectionsFilters from './collectionsFilters';
+import Footer from './footer';
 import { collections } from '../data/collections';
 import './collections.css';
 
@@ -18,17 +19,20 @@ export default function Collections() {
   }
 
   return (
+    <div>
     <div className='collections-content'>
 
       <div className='all-collections'>
         <div className='all-collections__filters'>
           <CollectionsFilters collections={collections} onCollectionsFiltered={(col) => setAllCollections(col)}/>
         </div>
-        <div id='toto' className='all-collections__results'>
+        <div id='all-collections__results_' className='all-collections__results'>
           { displayAllCollections() }
         </div>
       </div>
 
+    </div>
+    <Footer footerClass='footer-container'/>
     </div>
   );
 }

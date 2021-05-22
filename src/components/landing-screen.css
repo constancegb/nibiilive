@@ -19,12 +19,11 @@ body {
 
 .animation-container__text {
   position: absolute;
-  top: 39%;
+  top: 38%;
   font-family: 'Oswald', sans-serif;
   font-size: 15vh;
   color : #737373;
   opacity: 0;
-  font-weight: 900;
   transition: opacity 2s ease;
 }
 
@@ -96,7 +95,7 @@ body {
   transition: opacity 2s ease-in;
 }
 .call-to-action {
-  margin-top: 20vh;
+  margin-top: 24vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,20 +142,21 @@ body {
 }
 
 .homepage-title-main {
-  font-size: 15vh;
-  font-family: 'Raleway', sans-serif;
+  font-size: 16vh;
+  font-family: 'Oswald', sans-serif;
 }
 
 .homepage-title-sub {
-  font-size: 5vh;
-  font-family: 'Amatic SC', sans-serif;
+  font-size: 4vh;
+  font-family: 'Roboto', sans-serif;
   z-index: 9;
 }
 
 .page {
-  font-family: 'Amatic SC';
+  font-family: 'Roboto';
+  font-weight: lighter;
   text-transform: uppercase;
-  font-size: 33px;
+  font-size: 30px;
   letter-spacing: 3px;
   color: #e0d8cf;
 }
@@ -174,6 +174,10 @@ body {
 
   .slide-right {
     left: 0;
+  }
+  .animation-container__text {
+    font-size: 8vh;
+    top: 43%;
   }
 }
 

@@ -1,14 +1,14 @@
 .collection-container-wrapper {
-  margin: 4px;
+  margin: 20px;
 }
 
 .collection-container {
-  width: 45vw;
-  height: 43vh;
   background-repeat:no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   cursor: pointer;
+  border-radius: 5px;
+  background-color: #e0d8cf;
 }
 
 .collection-info {
@@ -19,19 +19,21 @@
   height: 100%;
   background-color: black;
   transition: opacity 0.8s ease;
-  padding: 15px
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .collection-info:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .first-col {
-  width: 65%;
+  width: 70%;
 }
 
 .second-col {
-  width: 35%;
+  width: 30%;
+  padding-left: 35px;
 }
 
 .collection-name,
@@ -43,30 +45,43 @@
 }
 
 .collection-name {
-  font-family: 'Amatic SC';
+  font-family: 'Oswald';
   color: #e0d8cf;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 2.2em;
+  margin-bottom: 10px;
 }
 
 .collection-description {
-  font-family: 'Raleway';
-    color: #e0d8cf;
-    font-size: 1em;
-    text-align: center;
+  font-family: 'Oswald';
+  letter-spacing: 1px;
+  color: #e0d8cf;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .collection-items {
-  font-family: 'Amatic SC';
+  font-family: 'Roboto';
   color: #e0d8cf;
   font-size: 1.2em;
 }
 
 .items-available {
-  font-size: 3em;
+  font-size: 2.5em;
   font-style: normal;
   font-family: 'Roboto';
   margin-right: 5px;
+}
+
+.items-available__wrapper {
+
+}
+
+.available-label {
+  font-size: 0.9em;
+  font-family: 'Roboto';
+  float:right !important;
 }
 
 .see-col-btn {
@@ -94,9 +109,18 @@
 }
 
 @media screen and (max-width: 767px) {
+  .collection-container-wrapper {
+    margin: 10px 0;
+  }
+
   .collection-container {
     width: 100vw;
     height: 50vh;
+    border-radius: 0px;
+  }
+
+  .collection-info {
+    border-radius: 0px;
   }
 
   .collection-description {
@@ -114,11 +138,23 @@
     justify-content: space-around;
     align-items: center;
   }
+
+  .items-available {
+    margin-right: 12px;
+  }
+
+  .first-col {
+    width: 90vw;
+  }
+
+  .second-col {
+    padding-left: 0px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .collection-container {
-    width: 45vw;
+    width: 40vw;
     height: 43vh;
   }
 

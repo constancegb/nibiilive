@@ -15,23 +15,15 @@ const seasonOptions = [
   { value: 'hiver', label: 'Automne / hiver' }
 ];
 
-const sexOptions = [
-  { value: 'femmes', label: 'Femmes' },
-  { value: 'hommes', label: 'Hommes' },
-  { value: 'enfants', label: 'Enfants' }
-];
-
 export default function CollectionsFilters({ collections, onCollectionsFiltered }) {
   const [categories, setCategories] = useState([]);
-  const [sexes, setSexes] = useState(sexOptions);
   const [seasons, setSeasons] = useState(seasonOptions);
 
-  const filterCollections = (cat, sea, sex) => {
+  const filterCollections = (cat, sea) => {
     const filteredCols =  collections.filter((col, i) => {
       return (
         (cat.map(i => i.value).includes(col.category) || cat.length === 0) &&
-        (sea.map(i => i.value).includes(col.seasonality) || sea.length === 0) &&
-        (sex.map(i => i.value).some(item => col.sex.includes(item)) || sex.length === 0)
+        (sea.map(i => i.value).some(item => col.seasonality.includes(item)) || sea.length === 0)
       )
     });
     onCollectionsFiltered(filteredCols)
@@ -40,19 +32,13 @@ export default function CollectionsFilters({ collections, onCollectionsFiltered 
   const handleCategoryChange = async (cat, key) => {
     const catVal = cat ? cat : [];
     setCategories(catVal)
-    filterCollections(catVal, seasons, sexes)
+    filterCollections(catVal, seasons)
   }
 
   const handleSeasonChange = async (sea, key) => {
     const seaVal = sea ? sea : [];
     setSeasons(seaVal)
-    filterCollections(categories, seaVal, sexes)
-  }
-
-  const handleSexChange = async (sex, key) => {
-    const sexVal = sex ? sex : [];
-    setSexes(sexVal)
-    filterCollections(categories, seasons, sexVal)
+    filterCollections(categories, seaVal)
   }
 
   const customStyles = {
@@ -60,7 +46,7 @@ export default function CollectionsFilters({ collections, onCollectionsFiltered 
       ...provided,
       backgroundColor: state.isFocused ? '#c7bcb1' : 'transparent',
       color: state.isFocused ? 'white' : '#737373',
-      fontFamily: 'Amatic SC',
+      fontFamily: 'Oswald',
       fontSize: '1.1em',
       letterSpacing: '1px',
       ':hover': {
@@ -69,7 +55,7 @@ export default function CollectionsFilters({ collections, onCollectionsFiltered 
         color: 'white',
       }
     }),
-    placeholder: (provided) => ({ ...provided, fontFamily: 'Amatic SC', fontSize: '1.3em' }),
+    placeholder: (provided) => ({ ...provided, fontFamily: 'Oswald', fontSize: '1.1em' }),
     valueContainer: (provided) => ({ ...provided, padding: '4px 8px' }),
     control: (provided) => ({
        ...provided,
@@ -79,13 +65,13 @@ export default function CollectionsFilters({ collections, onCollectionsFiltered 
          border: '1px solid #e2e2e2',
        }
     }),
-    noOptionsMessage: (provided) => ({ ...provided, fontFamily: 'Amatic SC', fontSize: '1.3em' }),
+    noOptionsMessage: (provided) => ({ ...provided, fontFamily: 'Oswald', fontSize: '1.1em' }),
     multiValue: (provided) => ({
       ...provided,
       backgroundColor: '#c7bcb1',
       color: 'white',
-      fontFamily: 'Amatic SC',
-      fontSize: '1.3em',
+      fontFamily: 'Oswald',
+      fontSize: '1.1em',
       letterSpacing: '1px'
     }),
     multiValueRemove: (provided) => ({
@@ -123,17 +109,6 @@ export default function CollectionsFilters({ collections, onCollectionsFiltered 
             options={seasonOptions}
             className='collections-select'
             onChange={handleSeasonChange}
-            styles={customStyles}/>
-      </div>
-
-      <div className='sex-filter filter'>
-        <Select
-            value={sexes}
-            isMulti
-            name='sex'
-            options={sexOptions}
-            className='collections-select'
-            onChange={handleSexChange}
             styles={customStyles}/>
       </div>
 

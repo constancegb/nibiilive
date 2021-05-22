@@ -18,7 +18,8 @@
 .homepage-menu-home {
   text-decoration: none;
   color: #c7bcb1;
-  font-family: 'Raleway';
+  font-family: 'Oswald';
+  font-weight: 900;
 }
 
 .homepage-menu-home:hover {
