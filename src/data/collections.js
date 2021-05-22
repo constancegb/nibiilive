@@ -42,7 +42,7 @@ export const collections = [
     category: 'sacs/pochettes',
     seasonality: ['ete', 'hiver'],
     isPermanent: false,
-    img: ['yuka'],
+    img: ['yukapena'],
     items: [
       {
         name: 'Pena',
@@ -90,7 +90,7 @@ export const collections = [
     category: 'sacs/pochettes',
     seasonality: ['ete'],
     isPermanent: false,
-    img: ['lima'],
+    img: ['limaoni'],
     items: [
       {
         name: 'Oni',
@@ -129,7 +129,7 @@ export const collections = [
     category: 'maison/deco',
     seasonality: ['ete', 'hiver'],
     isPermanent: false,
-    img: ['home'],
+    img: ['homeplaidrosa'],
     items: [
       {
         name: 'Plaid rosa',
